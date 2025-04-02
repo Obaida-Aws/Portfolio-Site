@@ -1,0 +1,87 @@
+@use "../utils/variables" as *;
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    background: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7em;
+    padding: 80px 12% 0;
+
+    &__content{
+        max-width: 800px;
+        margin-top: 120px;
+    }
+
+    &__title{
+        font-size: 62px;
+        line-height: 1.2;
+        color: $dark-color;
+
+        span{
+            color: $primary-color;;
+        }
+    }
+
+    &__description{
+        font-size: 18px;
+        margin: 25px 0 30px;
+        color: $dark-color;
+    }
+
+    &__btn-box{
+        display: flex;
+        gap: 20px;
+    }
+
+    &__btn{
+        padding: 15px 28px;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    &__btn--primary{
+        background: $dark-color;
+        color: $text-color;
+
+        &:hover{
+            background: $text-color;
+            color: $dark-color;
+            border: 2px solid $dark-color;
+        }
+    }
+
+    &__btn--secondary{
+        background: $primary-color;
+        color: $text-color;
+        border: 2px solid $dark-color;
+
+        &:hover{
+            background: $text-color;
+            color: $hover-color;
+        }
+    }
+    
+    &__img-box{
+        img{
+            border-radius: 50%;
+            width: 500px;
+            height: 500px;
+        }
+    }
+}
+
+@media (max-width:1024px){
+    .home{
+        flex-direction: column;
+        text-align: center;
+    }
+    .home__img-box img{
+        width: 80%;
+    }
+}

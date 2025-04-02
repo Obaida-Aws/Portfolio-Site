@@ -1,0 +1,10 @@
+@use 'base/resets' as *;
+@use 'base/base' as *;
+
+@use 'blocks/header' as *;
+@use 'blocks/footer' as *;
+@use 'blocks/blocks' as *;
+
+@use 'utils/mixins' as *;
+@use 'utils/variables' as *;
+@use 'utils/utils' as *;

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obaida's Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__logo"><span>Obaida</span>Aws</a>
+        <nav class="navbar">
+            <ul class="navbar__list">
+                <li><a href="#" class="navbar__item navbar__item--active">Portfolio</a></li>
+                <li><a href="#experience" class="navbar__item">Experience</a></li>
+                <li><a href="#education" class="navbar__item">Education</a></li>
+            </ul>
+        </nav>
+        <a href="./pages/contact.html" class="header__contact">Contact</a>
+    </header>
+    <main>
+        <section class="home">
+            <div class="home__content">
+                <h1 class="home__title">I'm <span>Obaida <br></span>a Frontend Developer</h1>
+                <p class="home__description">A Computer Engineer passionate about learning, sharing knowledge, and developing skills, with a particular focus on front-end design.</p>
+                <div class="home__btn-box">
+                    <button class="btn btn--primary">Hire Me</button>
+                    <button class="btn btn--secondary">Experience</button>
+                </div>
+            </div>
+            <figure class="home__img-box">
+                <img src="images/obaida.jpeg" alt="Obaida's photo" class="home__img">
+                <figcaption class="home__figcaption">Obaida Aws - Frontend Developer</figcaption>
+            </figure>
+        </section>
+
+        
+        <section class="about">
+            <figure class="about__img">
+                <img src="images/obaida.jpeg" alt="Obaida's photo" class="about__img-src">
+                <figcaption class="about__figcaption">Obaida Aws - Computer Engineer</figcaption>
+            </figure>
+            <div class="about__content">
+                <h2 class="about__title">About <span>Me</span></h2>
+                <h3 class="about__role">Frontend Developer</h3>
+                <p class="about__description">As a recent graduate in Computer Engineering, I bring forth a robust skill set in problem-solving, complemented by proficient communication abilities and adept time management skills.</p>
+                <a href="#experience" class="btn btn--secondary">Experience</a>
+            </div>
+        </section>
+
+       
+        <section class="cards" id="experience">
+            <h2 class="cards__title">Experience</h2>
+            <div class="cards__content">
+                <article class="card">
+                    <figure class="card__figure">
+                        <img src="images/asal.jpg" alt="Asal Technologies Logo" class="card__img">
+                        <figcaption class="card__figcaption">Asal Technologies - Frontend Development Training</figcaption>
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__company">Asal Technologies</h3>
+                        <p class="card__description">Completed a 320-hour front-end development training mastering HTML, CSS, TypeScript, Git, GitHub, and React.</p>
+                        <button class="btn btn--tertiary">More Details</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card__figure">
+                        <img src="images/dimensions.jpg" alt="Dimensions Infotech Logo" class="card__img">
+                        <figcaption class="card__figcaption">Dimensions Infotech - Full Stack Developer</figcaption>
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__company">Dimensions Infotech</h3>
+                        <p class="card__description">Worked as a Full Stack Developer with C#, SQL, ASP.NET, Web Forms, DevExpress, and ORM in the BookSaleFair project.</p>
+                        <button class="btn btn--tertiary">More Details</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <figure class="card__figure">
+                        <img src="images/udacity.jpg" alt="Udacity Logo" class="card__img">
+                        <figcaption class="card__figcaption">Udacity - Frontend Training</figcaption>
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__company">Udacity</h3>
+                        <p class="card__description">Completed front-end training, reviewing HTML, CSS, and key concepts while working on projects.</p>
+                        <button class="btn btn--tertiary">More Details</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+       
+        <section class="cards" id="education">
+            <h2 class="cards__title">Education</h2>
+            <div class="cards__content">
+                <article class="card">
+                    <figure class="card__figure">
+                        <img src="images/najah.png" alt="An-Najah University Logo" class="card__img">
+                        <figcaption class="card__figcaption">An-Najah National University - Computer Engineering</figcaption>
+                    </figure>
+                    <div class="card__info">
+                        <h3 class="card__company">An-Najah National University</h3>
+                        <p class="card__description">Studied Computer Engineering for five years, building a solid foundation in hardware, software, and problem-solving.</p>
+                        <button class="btn btn--tertiary">More Details</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="footer__social">
+            <a href="#" class="footer__social-link"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#" class="footer__social-link"><i class='bx bxl-linkedin-square'></i></a>
+            <a href="#" class="footer__social-link"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#" class="footer__social-link"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <ul class="footer__list">
+            <li><a href="#" class="footer__item">FAQ</a></li>
+            <li><a href="#" class="footer__item">Services</a></li>
+            <li><a href="#" class="footer__item">About Me</a></li>
+            <li><a href="#" class="footer__item">Contact</a></li>
+            <li><a href="#" class="footer__item">Privacy Policy</a></li>
+        </ul>
+        <p class="footer__copyright">&copy; 2025 Obaida | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

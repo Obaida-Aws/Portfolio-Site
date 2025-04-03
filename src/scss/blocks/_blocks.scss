@@ -1,321 +1,231 @@
 @use "../utils/variables" as *;
+@use "../utils/mixins" as *;
 
-.home{
-    width: 100%;
-    min-height: 100vh;
-    background: $secondary-color;
+.home {
+  @include flex-center(row, center, center);
+  width: 100%;
+  min-height: 100vh;
+  background: $secondary-color;
+  gap: 7em;
+  padding: 80px 12% 0;
+
+  &__content {
+    max-width: 800px;
+    margin-top: 120px;
+  }
+
+  &__title {
+    font-size: 62px;
+    line-height: 1.2;
+    color: $dark-color;
+
+    span {
+      color: $primary-color;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    margin: 25px 0 30px;
+    color: $dark-color;
+  }
+
+  &__btn-box {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7em;
-    padding: 80px 12% 0;
+    gap: 20px;
+  }
 
-    &__content{
-        max-width: 800px;
-        margin-top: 120px;
-    }
-
-    &__title{
-        font-size: 62px;
-        line-height: 1.2;
-        color: $dark-color;
-
-        span{
-            color: $primary-color;;
-        }
-    }
-
-    &__description{
-        font-size: 18px;
-        margin: 25px 0 30px;
-        color: $dark-color;
-    }
-
-    &__btn-box{
-        display: flex;
-        gap: 20px;
-    }
-
-    &__btn{
-        padding: 15px 28px;
-        border-radius: 8px;
-        font-size: 18px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.3s;
-    }
-
-    &__btn--primary{
-        background: $dark-color;
-        color: $text-color;
-
-        &:hover{
-            background: $text-color;
-            color: $dark-color;
-            border: 2px solid $dark-color;
-        }
-    }
-
-    &__btn--secondary{
-        background: $primary-color;
-        color: $text-color;
-        border: 2px solid $dark-color;
-
-        &:hover{
-            background: $text-color;
-            color: $hover-color;
-        }
-    }
-    
-    &__img-box{
-        img{
-            border-radius: 50%;
-            width: 500px;
-            height: 500px;
-        }
-    }
-}
-.cards{
-    &__title{
-        text-align: center;
-        font-size: 2.2em;
-        color: $primary-color;
-        margin-bottom: 30px;
-    }
-
-    &__content{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 20px;
-        padding: 20px;
-        justify-items: center;
-    }
-}
-
-.card{
-    background: $secondary-color;
-    height: 100%;
-    width: 100%;
-    max-width: 320px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 20px;
-    transition: transform 0.3s;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    &:hover{
-        transform: translateY(-5px);
-    }
-
-    &__figure {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    &__img{
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    &__figcaption {
-        font-size: 0.9rem;
-        color: #555;
-        margin-top: 5px;
-    }
-
-    &__info{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-        margin-bottom: 20px;
-    }
-
-    &__project{
-        font-size: 1.2rem;
-        color: $primary-color;
-        margin-top: 10px;
-    }
-
-    &__description{
-        font-size: 1rem;
-        line-height: 1.5;
-        color: $dark-color;
-    }
-
-    &__btn{
-        padding: 12px 25px;
-        border-radius: 8px;
-        font-size: 16px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: 0.3s;
-        align-self: center;
-    }
-
-    &__btn--tertiary {
-        background-color: $primary-color;
-        color: $text-color;
-        border: 2px solid transparent;
-        margin-top: 15px;
-
-        &:hover{
-            background-color: $text-color;
-            color: $primary-color;
-            border: 2px solid $primary-color;
-        }
-    }
-}
-@media (max-width: 1024px) {
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
-    .home__img-box img {
-        width: 80%;
-    }
-
-    .cards {
-        &__content {
-            grid-template-columns: 1fr; 
-            justify-items: center;
-        }
-        
-        .card {
-            width: 90%;
-            max-width: 400px;
-        }
-
-        .card__info {
-            h3 {
-                font-size: 1.1rem;
-            }
-
-            p {
-                font-size: 0.95rem;
-            }
-        }
-
-        .card__figcaption {
-            font-size: 0.85rem;
-        }
-    }
-}
-
-.cards__btn-box {
-    display: flex;
-    justify-content: center; 
-    margin-top: 30px; 
-    width: 100%; 
-}
-
-.cards__btn {
+  &__btn {
     padding: 15px 28px;
     border-radius: 8px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s;
+  }
+
+  &__btn--primary {
+    background: $dark-color;
+    color: $text-color;
+
+    &:hover {
+      background: $text-color;
+      color: $dark-color;
+      border: 2px solid $dark-color;
+    }
+  }
+
+  &__btn--secondary {
+    background: $primary-color;
+    color: $text-color;
+    border: 2px solid $dark-color;
+
+    &:hover {
+      background: $text-color;
+      color: $hover-color;
+    }
+  }
+
+  &__img-box {
+    img {
+      border-radius: 50%;
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
+
+.cards {
+  &__title {
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    font-size: 2.2em;
+    color: $primary-color;
+    margin-bottom: 30px;
+  }
 
-    &--primary {
-        background: $primary-color;
-        color: $text-color;
-        border: 2px solid transparent;
-
-        &:hover {
-            background: $text-color;
-            color: $primary-color;
-            border: 2px solid $primary-color;
-        }
-    }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
 }
 
-@media (max-width: 768px) {
-    .home__content h1 {
-        font-size: 48px;
-        margin-top: 120px;
+.card {
+  background: $secondary-color;
+  height: 100%;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  &__figcaption {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-bottom: 20px;
+  }
+
+  &__project {
+    font-size: 1.2rem;
+    color: $primary-color;
+    margin-top: 10px;
+  }
+
+  &__description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: $dark-color;
+  }
+
+  &__btn {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: center;
+  }
+
+  &__btn--tertiary {
+    background-color: $primary-color;
+    color: $text-color;
+    border: 2px solid transparent;
+    margin-top: 15px;
+
+    &:hover {
+      background-color: $text-color;
+      color: $primary-color;
+      border: 2px solid $primary-color;
     }
-
-    .home__btn-box {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .home__btn {
-        padding: 10px 20px; 
-        font-size: 14px;    
-    }
-
-    .cards {
-        &__content {
-            grid-template-columns: 1fr;
-        }
-
-        .card {
-            width: 100%;
-            max-width: 100%;
-        }
-
-        .card__info {
-            h3 {
-                font-size: 1rem;
-            }
-
-            p {
-                font-size: 0.9rem;
-            }
-        }
-
-        .card__figcaption {
-            font-size: 0.8rem;
-        }
-    }
+  }
 }
 
-@media (max-width: 480px) {
-    .home__content h1 {
-        font-size: 36px;
-        margin-top: 120px;
+@include responsive(tablet) {
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home__img-box img {
+    width: 80%;
+  }
+
+  .cards {
+    &__content {
+      grid-template-columns: 1fr;
+      justify-items: center;
     }
 
-    .home__btn-box {
-        gap: 10px; 
+    .card {
+      width: 90%;
+      max-width: 400px;
     }
 
-    .home__btn {
-        padding: 8px 15px;  
-        font-size: 12px;    
+    .card__info {
+      h3 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
     }
 
-    .cards {
-        &__content {
-            padding: 10px;
-        }
-
-        .card__info {
-            h3 {
-                font-size: 0.95rem;
-            }
-
-            p {
-                font-size: 0.85rem;
-            }
-        }
-
-        .card__figcaption {
-            font-size: 0.75rem;
-        }
+    .card__figcaption {
+      font-size: 0.85rem;
     }
+  }
+}
 
-    .home__img-box img {
-        width: 100%;
+.cards__btn-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.cards__btn {
+  @include button-style($primary-color, $text-color);
+
+  &--primary {
+    border: 2px solid transparent;
+
+    &:hover {
+      background: $text-color;
+      color: $primary-color;
+      border: 2px solid $primary-color;
     }
+  }
 }

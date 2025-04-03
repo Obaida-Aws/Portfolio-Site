@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 12%;
+  padding: 20px max(5%, 12%);
   background: $background-header;
   backdrop-filter: blur(10px);
   display: flex;
@@ -15,7 +15,7 @@
   z-index: 100;
 
   &__logo {
-    font-size: 25px;
+    font-size: max(20px, 2vw);
     color: $text-color;
     font-weight: 600;
     transition: 0.3s ease;
@@ -42,7 +42,7 @@
     }
 
     ul li a {
-      font-size: 18px;
+      font-size: clamp(16px, 1.8vw, 20px);;
       color: $text-color;
       font-weight: 500;
       padding: 5px 10px;

@@ -6,6 +6,10 @@
   width: 100%;
   min-height: 100vh;
   background: $secondary-color;
+  background-image: url('../src/images/back1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   gap: 7em;
   padding: 80px 12% 0;
 
@@ -21,6 +25,17 @@
 
     span {
       color: $primary-color;
+    }
+    animation: titleAnimation 1.5s ease 0s 1 normal both;
+  }
+  @keyframes titleAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -71,6 +86,7 @@
       border-radius: 50%;
       width: 500px;
       height: 500px;
+      box-shadow: 0 0 25px $border-color, 0 0 50px $border-color;
     }
   }
 }
